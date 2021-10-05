@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        Hello from ImproveEnglish
+        Hello from ImproveEnglish Blog
       </div>
     </div>
   )
