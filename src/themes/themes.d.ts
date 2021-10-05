@@ -23,14 +23,14 @@ declare module "styled-components" {
       white2: string;
       white3: string;
       white4: string;
-      grey1: string;
-      grey2: string;
-      grey3: string;
-      grey4: string;
-      grey5: string;
-      grey6: string;
-      grey7: string;
-      grey8: string;
+      gray1: string;
+      gray2: string;
+      gray3: string;
+      gray4: string;
+      gray5: string;
+      gray6: string;
+      gray7: string;
+      gray8: string;
     },
     fonts: {
       default: string;

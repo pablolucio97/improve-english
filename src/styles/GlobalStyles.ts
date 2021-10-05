@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-
 const GlobalStyles = createGlobalStyle`
 
     *{
@@ -10,8 +9,25 @@ const GlobalStyles = createGlobalStyle`
         font-family: "Inter", sans-serif;
     }
 
+    @media(max-width: 1080px){
+        html{
+            font-size: 93.75%;
+        }
+    }
+
+    @media(max-width: 720px){
+        html{
+            font-size: 87.5%;
+        }
+    }
+
+    html{
+        scroll-behavior: smooth;
+
+    }
+
     body{
-        background: ${props => props.theme.colors.white1};
+        background: ${(props) => props.theme.colors.white1};
         overflow-x: hidden;
     }
 
@@ -37,7 +53,6 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
     }
 
-`
+`;
 
-
-export default GlobalStyles
+export default GlobalStyles;
