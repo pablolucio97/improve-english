@@ -2,6 +2,7 @@ import { Container } from "./styles";
 import { PostProps } from '../../types/Post'
 import { format } from "date-fns";
 import { FaRegCommentDots, FaHeart } from 'react-icons/fa'
+import {useRouter} from 'next/router'
 
 export default function BoxPost({
     author,
@@ -11,8 +12,12 @@ export default function BoxPost({
     likes,
     comments,
 }: PostProps) {
+
+
+    const router = useRouter()
+
     return (
-        <Container>
+        <Container onClick={() => {router.push(`posts/dfsdf`)}}>
             <h2>{title}</h2>
             <span>{content}</span>
             <div>

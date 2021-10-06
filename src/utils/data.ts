@@ -2,10 +2,10 @@ const data = [
   {
     author: "Pablo Lúcio",
     title: "Drive Up | O que significa este phrasal verb?",
-    content: "O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a...",
+    content: "O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a...",
     likes: 12,
     comments: 23,
-    lastPostDate: new Date(2021, 10, 10),
+    lastPostDate: String(new Date(2021, 10, 10)),
   },
   {
     author: "Pablo Lúcio",
@@ -13,7 +13,7 @@ const data = [
     content: "O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a...",
     likes: 2,
     comments: 13,
-    lastPostDate: new Date(2021, 10, 10),
+    lastPostDate: String(new Date(2021, 10, 10)),
   },
   {
     author: "Pablo Lúcio",
@@ -21,7 +21,7 @@ const data = [
     content: "Já falamos aqui no site sobre a expressão Be About To. Se você já leu aquele artigo, deve estar se perguntando...",
     likes: 32,
     comments: 45,
-    lastPostDate: new Date(2021, 10, 10),
+    lastPostDate: String(new Date(2021, 10, 10)),
   },
   {
     author: "Pablo Lúcio",
@@ -29,7 +29,7 @@ const data = [
     content: "ÁUDIO DO TEXTO TEXTO EM COLUNAS Peter and Nancy’s house A casa...",
     likes: 9,
     comments: 15,
-    lastPostDate: new Date(2021, 10, 10),
+    lastPostDate: String(new Date(2021, 10, 10)),
   },
   {
     author: "Pablo Lúcio",
@@ -37,7 +37,7 @@ const data = [
     content: "In this article we will to explain how to use the It...",
     likes: 42,
     comments: 55,
-    lastPostDate: new Date(2021, 10, 10),
+    lastPostDate: String(new Date(2021, 10, 10)),
   },
 ];
 

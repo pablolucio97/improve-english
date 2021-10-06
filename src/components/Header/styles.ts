@@ -15,8 +15,9 @@ export const Container = styled.header`
     margin-right: 1.2rem;
   }
 
-  h1 {
+  a {
       color: ${(props) => props.theme.colors.white1}; 
       font-size: 1.6rem;
+      font-weight: 600;
   }
 `;
