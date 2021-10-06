@@ -2,7 +2,7 @@ const data = [
   {
     author: "Pablo Lúcio",
     title: "Drive Up | O que significa este phrasal verb?",
-    content: "O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a...",
+    content: "O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a..O verbo to drive tem dois sentidos essenciais: primeiro, o de “dirigir” um automóvel. É daí que vem, por exemplo, a...",
     likes: 12,
     comments: 23,
     lastPostDate: new Date(2021, 10, 10),

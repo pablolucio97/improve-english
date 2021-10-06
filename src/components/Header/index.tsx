@@ -1,10 +1,15 @@
-import {Container} from './styles'
+import { Container } from './styles'
+import { FaFlagUsa } from 'react-icons/fa'
 
-export default function Header(){
-    return(
+export default function Header() {
+    return (
         <Container>
-            <img src="assets/logo.svg" alt="improve-english" />
-            <h1>Improve English</h1>
+            <h1>
+                <FaFlagUsa
+                    color='#e6473c'
+                    style={{ margin: 4 }} />
+                Improve English
+            </h1>
         </Container>
     )
 }

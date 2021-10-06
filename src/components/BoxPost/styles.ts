@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 240px;
-  height: 240px;
   margin: 16px;
   box-shadow: ${(props) => props.theme.shadows.soft};
-  border: 1px solid cyan;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   cursor: pointer;
   padding: 1.2rem;
   transition: all .32s ease;
@@ -18,14 +15,17 @@ export const Container = styled.div`
   }
 
   h2 {
-    font-size: .92rem;
+    font-size: 1.2rem;
     font-weight: 600;
+    text-align: center;
+    margin-top: 1.2rem;
   }
 
   span {
-    margin: 1.2rem auto;
-    font-size: 0.8rem;
+    margin: 1.24rem auto;
+    font-size: 0.92rem;
     font-weight: 400;
+    width: 80%;
   }
 
   div {
@@ -35,8 +35,8 @@ export const Container = styled.div`
     padding: 0 1.2rem;
 
     p {
-      font-size: 0.8rem;
-      margin:  0.24rem;
+      font-size: 0.72rem;
+      margin: 0.12rem 0.24rem;
       font-weight: 300;
     }
   }
@@ -44,8 +44,8 @@ export const Container = styled.div`
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding-right: 2rem;
-    margin-top: 1.2rem;
+    padding-right: .92rem;
+    margin-top: .24rem;
 
     li{
         margin: 0 .24rem;
@@ -55,7 +55,8 @@ export const Container = styled.div`
             justify-content:center;
             align-items: center;
             font-size: .64rem;
-            background-color: ${props => props.theme.colors.warningText};
+            background-color: ${props => props.theme.colors.primary2};
+            color: ${props => props.theme.colors.white1};
             width: 22px;
             height: 22px;
             border-radius: 50%;
