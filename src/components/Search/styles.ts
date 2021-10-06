@@ -3,13 +3,23 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 256px;
+  justify-content: flex-end;
+  width: 100vw;
   height: 56px;
   padding: 0.88rem;
-  margin: 3.2rem;
-  box-shadow: ${(props) => props.theme.shadows.soft};
-  background: ${(props) => props.theme.colors.white4};
+  margin-top: .8rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 256px;
+    height: 56px;
+    padding: 0.88rem;
+    margin: 3.2rem;
+    box-shadow: ${(props) => props.theme.shadows.soft};
+    background: ${(props) => props.theme.colors.white4};
+  }
 
   input {
     height: 32px;
