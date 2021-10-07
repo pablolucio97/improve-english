@@ -7,17 +7,22 @@ import { Container } from './styles'
 import { FaFlagUsa } from 'react-icons/fa'
 
 import { useEffect, useState } from 'react'
-import {usePosts} from '../hooks/usePosts'
+import { usePosts } from '../hooks/usePosts'
 
 
 export default function Home({ }: PostProps) {
 
 
-  const {posts, setPosts, searchPost, sortPostsByRelevance, sortPostsAlphabetically} = usePosts()
+  const {
+    posts,
+    setPosts,
+    searchPost,
+    sortPostsByRelevance,
+    sortPostsAlphabetically,
+    sortPostsByReleaseDate
+  } = usePosts()
 
   const [search, setSearch] = useState('')
-
-
 
   useEffect(() => {
     setPosts(posts)
@@ -29,7 +34,6 @@ export default function Home({ }: PostProps) {
       setPosts(data)
     }
   }, [posts, search])
-
 
 
   return (
@@ -45,21 +49,31 @@ export default function Home({ }: PostProps) {
         <h1><FaFlagUsa color='#e6473c' style={{ margin: 8 }} />Last posts</h1>
         <div className="filterContainer">
           <strong>Filter your post by:</strong>
-          <button >Release date</button>
+          <button onClick={() => sortPostsByReleaseDate(posts)} >Release date</button>
           <button onClick={() => sortPostsAlphabetically(posts)}>Alphabeticallly</button>
           <button onClick={() => sortPostsByRelevance(posts)}>Most relevants</button>
         </div>
         <div>
-          {posts.map(post => (
-            <BoxPost
-              author={post.author}
-              content={post.content}
-              title={post.title}
-              lastPostDate={String(post.lastPostDate)}
-              likes={post.likes}
-              comments={post.comments}
-            />
-          ))}
+          {posts.length === 0 ?
+
+            <div className='noFoundPosts'>
+              <span>Desculpe, não foi encontrado nenhum post para a pesquisa mencionada.</span>
+            </div>
+
+            :
+
+            posts.map(post => (
+              <BoxPost
+                author={post.author}
+                content={post.content}
+                title={post.title}
+                lastPostDate={String(post.lastPostDate)}
+                likes={post.likes}
+                comments={post.comments}
+              />
+            ))
+          }
+
         </div>
       </main>
     </Container>

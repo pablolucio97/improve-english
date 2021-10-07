@@ -10,6 +10,7 @@ type PostsContextPros = {
     posts: PostProps[];
     sortPostsByRelevance?: (posts: PostProps[]) => void;
     sortPostsAlphabetically?: (posts: PostProps[]) => void;
+    sortPostsByReleaseDate?: (posts: PostProps[]) => void;
     searchPost?: (term: string) => void;
     setPosts: Dispatch<SetStateAction<any>>
 }
@@ -40,21 +41,35 @@ export const PostsProvider = ({ children }: ChildrenProps) => {
             return 0;
         });
 
+
         setPosts([...returnedPosts])
     }
 
     function searchPost(term: string) {
 
-        const foundPosts = []
-        const found = posts.find(post => post.title.search(term))
+        const possibleTitles = posts.map(post => post.title.toLowerCase().split(" "))
 
-        if (found) {
-            foundPosts.push(found)
-            console.log(foundPosts)
-            console.log(found)
-            console.log(term)
-            setPosts([...foundPosts])
+        const concatTitles = possibleTitles.flat(1)
+
+        if(concatTitles.includes(term)){
+           const filterFoundPosts = posts.filter(post => post.title?.toLocaleLowerCase().includes(term))
+           console.log(filterFoundPosts)
+           setPosts([...filterFoundPosts])
+        }else{
+            setPosts([])
         }
+        
+    }
+
+    function sortPostsByReleaseDate(posts: PostProps[]) {
+        const sortedPosts = posts.sort((a, b) => {
+            if (a.lastPostDate < b.lastPostDate) return -1;
+            if (a.lastPostDate > b.lastPostDate) return 1;
+            return 0
+        })
+
+        console.log('ok')
+        setPosts([...sortedPosts])
     }
 
 
@@ -64,6 +79,7 @@ export const PostsProvider = ({ children }: ChildrenProps) => {
             searchPost,
             sortPostsAlphabetically,
             sortPostsByRelevance,
+            sortPostsByReleaseDate,
             posts,
             setPosts
         }}>

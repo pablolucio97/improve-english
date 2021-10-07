@@ -1,22 +1,31 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  & .noFoundPosts {
+    display: flex;
+    justify-content: center;
+    span{
+      font-size: 1.2rem;
+      text-align: center;
+      color: ${props => props.theme.colors.gray2}
+    }
+  }
+
   & .filterContainer {
-    display: flex !important; 
+    display: flex !important;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     padding-bottom: 0.8rem;
     width: 100%;
 
-    button{
-        margin: 1.2rem .92rem;
+    button {
+      margin: 1.2rem 0.92rem;
     }
 
-    strong{
-        font-size: .72rem;
+    strong {
+      font-size: 0.72rem;
     }
-
   }
   main {
     display: flex;
