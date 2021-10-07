@@ -7,50 +7,17 @@ import { Container } from './styles'
 import { FaFlagUsa } from 'react-icons/fa'
 
 import { useEffect, useState } from 'react'
+import {usePosts} from '../hooks/usePosts'
 
 
 export default function Home({ }: PostProps) {
 
 
-  const [posts, setPosts] = useState<PostProps[]>(data as any)
-  const [search, setSearch] = useState('sdfdf')
+  const {posts, setPosts, searchPost, sortPostsByRelevance, sortPostsAlphabetically} = usePosts()
+
+  const [search, setSearch] = useState('')
 
 
-  function sortPostsAlphabetically(posts: PostProps[]) {
-    const returnedPosts = posts.sort((a, b) => {
-      if (a.title.toLocaleLowerCase() < b.title.toLocaleLowerCase()) return -1;
-      if (a.title.toLocaleLowerCase() > b.title.toLocaleLowerCase()) return 1;
-      return 0;
-    });
-
-    setPosts([...returnedPosts])
-
-  }
-
-  function sortPostsByRelevance(posts: PostProps[]) {
-    const returnedPosts = posts.sort((a, b) => {
-      if (a.likes < b.likes) return 1;
-      if (a.likes > b.likes) return -1;
-      return 0;
-    });
-    setPosts([...returnedPosts])
-
-  }
-
-  function searchPost(term: string) {
-
-    const foundPosts = []
-    const found = posts.find(post => post.title.search(term))
-
-
-    if (found) {
-      foundPosts.push(found)
-      console.log(foundPosts)
-      console.log(found)
-      console.log(term)
-      setPosts([...foundPosts])
-    }
-  }
 
   useEffect(() => {
     setPosts(posts)
