@@ -1,8 +1,8 @@
 import { Container } from "./styles";
 import { PostProps } from '../../types/Post'
-import { format } from "date-fns";
-import { FaRegCommentDots, FaHeart } from 'react-icons/fa'
-import {useRouter} from 'next/router'
+import { FaRegCommentDots, FaHeart, } from 'react-icons/fa'
+import { FiUser, FiClock } from 'react-icons/fi'
+import { useRouter } from 'next/router'
 
 export default function BoxPost({
     author,
@@ -17,13 +17,21 @@ export default function BoxPost({
     const router = useRouter()
 
     return (
-        <Container onClick={() => {router.push(`posts/dfsdf`)}}>
+        <Container onClick={() => { router.push(`posts/dfsdf`) }}>
             <h2>{title}</h2>
             <span>{content}</span>
             <div>
-                <p>{author}</p>
                 <p>
-                    {format(new Date(lastPostDate), "yyyy/MMM/dd")}
+                    <FiUser
+                        style={{marginRight: 8}}
+                    />
+                    {author}
+                </p>
+                <p>
+                    <FiClock
+                        style={{marginRight: 8, marginLeft: 4}}
+                    />
+                    {lastPostDate}
                 </p>
             </div>
             <ul>

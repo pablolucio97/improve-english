@@ -26,6 +26,8 @@ export const Container = styled.div`
     font-size: 0.92rem;
     font-weight: 400;
     width: 80%;
+    text-align: justify;
+    word-break: break-word;
   }
 
   div {
@@ -36,8 +38,9 @@ export const Container = styled.div`
 
     p {
       font-size: 0.72rem;
-      margin: 0.12rem 0.24rem;
-      font-weight: 300;
+      margin: 1.2rem 0.24rem;
+      font-weight: 400;
+      color: ${props => props.theme.colors.gray2}
     }
   }
   ul {

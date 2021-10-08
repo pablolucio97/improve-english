@@ -3,7 +3,6 @@ import { format } from 'date-fns'
 
 import { Container } from './styles'
 import Header from '../../components/Header'
-import Search from '../../components/Search'
 import { data } from '../../utils/data'
 
 
@@ -20,7 +19,6 @@ export default function Post() {
     return (
         <Container>
             <Header />
-            <Search />
             <article>
                 <h2>{dataExampleTitle}</h2>
                 <span>{dataExampleContent}</span>

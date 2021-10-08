@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction } from 'react'
 
 interface SearchProps {
     term: string;
-    searchPost: (term: string) => void;
+    searchPost?: (term: string) => void;
     setTerm: Dispatch<SetStateAction<any>>
 
 }
