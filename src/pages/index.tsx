@@ -11,10 +11,13 @@ import Prismic from '@prismicio/client'
 
 import { useEffect, useState } from 'react'
 import { GetStaticProps } from 'next'
+import {useRouter} from 'next/router'
 
 
 
 export default function Home({ returnedPosts }: Posts) {
+
+  const router = useRouter()
 
 
   const [search, setSearch] = useState('')
@@ -112,6 +115,7 @@ export default function Home({ returnedPosts }: Posts) {
                 lastPostDate={post.lastPostDate}
                 likes={post.likes}
                 comments={post.comments}
+                redirect={() => router.push(`/posts/${post.slug}`)}
               />
             ))
           }

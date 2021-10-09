@@ -11,14 +11,15 @@ export default function BoxPost({
     lastPostDate,
     likes,
     comments,
-    slug
+    slug,
+    redirect
 }: PostProps) {
 
 
     const router = useRouter()
 
     return (
-        <Container onClick={() => { router.push(`posts/${slug}`) }}>
+        <Container onClick={redirect}>
             <h2>{title}</h2>
             <span>{content}</span>
             <div>
