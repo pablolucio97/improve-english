@@ -1,6 +1,6 @@
 import { FaRegCommentDots, FaHeart } from 'react-icons/fa'
 
-import { Container } from './styles'
+import { Container } from '../../styles/indexStyle'
 import Header from '../../components/Header'
 import { getPrismicClient } from '../../services/prismic'
 import { GetStaticPaths, GetStaticProps } from 'next'
