@@ -1,7 +1,6 @@
 import Header from '../components/Header'
 import BoxPost from '../components/BoxPost'
 import Search from '../components/Search'
-import { data } from '../utils/data'
 import { Posts, PostProps } from '../types/Post'
 import { Container } from './styles'
 import { FaFlagUsa } from 'react-icons/fa'
@@ -11,7 +10,7 @@ import Prismic from '@prismicio/client'
 
 import { useEffect, useState } from 'react'
 import { GetStaticProps } from 'next'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 
 
