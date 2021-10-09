@@ -11,25 +11,26 @@ export default function BoxPost({
     lastPostDate,
     likes,
     comments,
+    slug
 }: PostProps) {
 
 
     const router = useRouter()
 
     return (
-        <Container onClick={() => { router.push(`posts/dfsdf`) }}>
+        <Container onClick={() => { router.push(`posts/${slug}`) }}>
             <h2>{title}</h2>
             <span>{content}</span>
             <div>
                 <p>
                     <FiUser
-                        style={{marginRight: 8}}
+                        style={{marginRight: 4}}
                     />
                     {author}
                 </p>
                 <p>
                     <FiClock
-                        style={{marginRight: 8, marginLeft: 4}}
+                        style={{marginRight: 4, marginLeft: 4}}
                     />
                     {lastPostDate}
                 </p>

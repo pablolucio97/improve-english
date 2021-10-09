@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 
 export type PostProps = {
+  slug?: string;
   author: string;
   title: string;
   content: string;
@@ -10,5 +11,5 @@ export type PostProps = {
 };
 
 export type Posts = {
-    posts: PostProps[];
+  returnedPosts: PostProps[];
 }
