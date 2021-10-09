@@ -94,9 +94,6 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
             year: 'numeric'
         })
     }
-
-    console.log(post)
-
     return {
         props: {
             post
